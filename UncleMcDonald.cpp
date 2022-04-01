@@ -2,10 +2,40 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int a = 0, b = 0, wire_length = 0, area = 0;
+    string input ="";
+
+    cout << "Hello Uncle McDonald!\nI am here to help you figure out how long and wide your fence will be to maximise the area of you farm.\n";
+    while (input != "RUN") {
+        cout << "Type \"RUN\" to start: ";
+        cin >> input;
+        cout << endl;
+        if (input == "RUN") {
+            cout << "Let's go!" << endl;
+        }
+        else {
+            cout << "You entered: " << input << endl;
+        }
+    }
+    cin.clear();
+    while (wire_length <= 0) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Please write how many meters of fence you have available? (not more than 2 147 483 647 meters): ";
+        cin >> wire_length;
+        cout << endl;
+    }
+    cout << "Given wire length is: " << wire_length << " meters" << endl;
+    a = wire_length / 4;
+    b = wire_length - 2 * a;
+    area = a*b;
+    cout << "a: " << a << ", b: " << b << ", area: " << area << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
