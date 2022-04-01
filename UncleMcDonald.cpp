@@ -6,24 +6,8 @@
 
 using namespace std;
 
-int main()
-{
-    int a = 0, b = 0, wire_length = 0, area = 0;
-    string input ="";
-
-    cout << "Hello Uncle McDonald!\nI am here to help you figure out how long and wide your fence will be to maximise the area of you farm.\n";
-    while (input != "RUN") {
-        cout << "Type \"RUN\" to start: ";
-        cin >> input;
-        cout << endl;
-        if (input == "RUN") {
-            cout << "Let's go!" << endl;
-        }
-        else {
-            cout << "You entered: " << input << endl;
-        }
-    }
-    cin.clear();
+int getWireLen() {
+    int wire_length = 0;
     while (wire_length <= 0) {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -32,10 +16,39 @@ int main()
         cout << endl;
     }
     cout << "Given wire length is: " << wire_length << " meters" << endl;
+    return wire_length;
+}
+
+void getResult(int wire_length) {
+    int a = 0, b = 0, area = 0;
     a = wire_length / 4;
     b = wire_length - 2 * a;
-    area = a*b;
-    cout << "a: " << a << ", b: " << b << ", area: " << area << endl;
+    area = a * b;
+    cout << "The most optimal dimensions, maximizing the area of your farm are as follows\n a: " << a << " meters, and  b: " << b << " meters.\nThis gives an area of: " << area << " square meters." << endl;
+}
+
+void farmingStarter() {
+    string input = "";
+
+    cout << "Hello Uncle McDonald!\nI am here to help you figure out how long and wide your fence will be to maximise the area of you farm.\n";
+    do {
+        cout << "Type \"RUN\" to start, or \"EXIT\" to exit the program: ";
+        cin >> input;
+        cout << endl;
+        if (input == "RUN") {
+            cout << "Let's go!" << endl;
+            getResult(getWireLen());
+        }
+        else {
+            cout << "You entered: " << input << endl;
+        }
+    } while (input != "EXIT");
+    cin.clear();
+}
+
+int main()
+{
+    farmingStarter();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
