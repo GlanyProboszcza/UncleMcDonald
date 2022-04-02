@@ -1,7 +1,9 @@
 # UncleMcDonald - farm area and fence optimization software
 Under MIT license: https://mit-license.org/
 
-
+I have approximately 5 months of actual hands-on expierence (academy, labs etc) with IT and IT Security.
+Before that I was highly exposed (in a more passive way) to the industry already few years before (thanks to my husbands profession).
+Now, after 5 months of intense academy related to CyberSecurity I am eager to use the planned 1-year period of my deliberate unemployment to extend my IT knowledge even more. That is why I am starting to learn how to code, use version control not only download stuff from github etc.
 
 IDE and compiler used:
 * Microsoft Visual Studio Community 2022 - 17.1.3
