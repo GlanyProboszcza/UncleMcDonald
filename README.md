@@ -9,6 +9,7 @@ IDE and compiler used:
 * MSVC v143 - VS 2022 C++ x64/x86 build tools
 * MSBuild
 * Windows 10 SDK (10.0.19041.0)
+* Platform used x64 (initialy Debug configuration, later tested on another PC with Release configuration)
 
 
 Resources and help used: 
