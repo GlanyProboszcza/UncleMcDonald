@@ -29,7 +29,7 @@ public:
     * A method printing the result in a fancy form along with ASCII graphic of the field.
     */
     void printResult() {
-        //simple ASCII drawing, designed using https://asciiflow.com/
+        //simple ASCII drawing, designed using https://asciiflow.com/  (the cr/lf characters had to be replaced with \\n for console to understand them - this took me a while to figure out)
         cout << "|   ++\n|   ||  a=?\n|   |+------+\n| W ||  F   |\n| A ||  a   |\n| L ||  r   |b=?\n| L ||  m   |\n|   ||      |\n|   |+------+\n|   ||  a=?\n|   ++\n";
         //after showing a simple ASCII-art drawing, the resulting values are pritned
         cout << "The most optimal dimensions, maximizing the area of your farm are as follows\n >>a: " << a << " meters,\n >>b: " << b << " meters.\nThis gives an area of: " << area << " square meters." << endl;
